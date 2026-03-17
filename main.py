@@ -29,5 +29,13 @@ def main():
             break
         else:
             print("Invalid choice.")
-
+def delete_task():
+    view_tasks()
+    try:
+        num = int(input("Enter task number to delete: "))
+        if 1 <= num <= len(tasks):
+            tasks.pop(num - 1)
+            print("Task deleted!")
+    except:
+        print("Invalid input.")
 main()
